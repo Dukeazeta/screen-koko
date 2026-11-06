@@ -764,9 +764,11 @@ p {
 }
 .ikeys {
   display: inline-flex;
+  align-items: center;
   gap: 4px;
   margin: 0 2px;
-  vertical-align: -6px;
+  vertical-align: middle;
+  transform: translateY(-2px);
 }
 .cta-band .hero-actions {
   justify-content: flex-start;
@@ -1384,6 +1386,7 @@ p {
     grid-column: 1 / -1;
   }
   .footer-col:last-child ul {
+    flex: none;
     grid-template-rows: none;
     grid-template-columns: 1fr 1fr;
     column-gap: 18px;
@@ -1395,6 +1398,9 @@ p {
   .footer-col a {
     padding: 9px 0;
     font-size: 24px;
+  }
+  .footer-col:last-child a {
+    padding: 17px 0;
   }
   .cta-band {
     grid-template-columns: 1fr;
