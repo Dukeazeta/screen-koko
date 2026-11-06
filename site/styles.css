@@ -350,7 +350,6 @@ p {
   background:
     radial-gradient(52% 42% at 50% 16%, var(--sky) 0%, rgba(213, 236, 255, 0) 72%),
     radial-gradient(34% 34% at 82% 26%, var(--lavender) 0%, rgba(244, 240, 255, 0) 70%),
-    radial-gradient(30% 30% at 16% 30%, #fdf3e7 0%, rgba(253, 243, 231, 0) 70%),
     var(--canvas);
 }
 .hero-copy {
@@ -749,7 +748,7 @@ p {
   overflow: hidden;
   border-radius: 28px;
   background:
-    radial-gradient(46% 70% at 100% 0%, rgba(0, 104, 249, 0.95) 0%, rgba(0, 104, 249, 0) 100%),
+    radial-gradient(46% 70% at 100% 0%, rgba(91, 156, 251, 0.95) 0%, rgba(91, 156, 251, 0) 100%),
     linear-gradient(128deg, var(--canvas) 0%, #e6eefa 40%, #c8dcf5 100%);
   box-shadow: rgba(18, 23, 34, 0.08) 0 0 0 0.5px inset;
 }
@@ -1012,6 +1011,13 @@ p {
   color: var(--ink-60);
   font-size: 14.5px;
   line-height: 1.45;
+}
+.combo-title,
+.combo-desc {
+  background: var(--slot);
+  box-shadow: 0 0 0 4px var(--slot);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 .combo[data-hit] .combo-title {
   color: var(--cobalt);
@@ -1286,6 +1292,24 @@ p {
 @media (max-height: 720px) and (min-width: 641px) {
   .hero-mark {
     display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .deck {
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+}
+/* Short phones (browser toolbars visible): let the page scroll instead of clipping rows. */
+@media (max-width: 640px) and (max-height: 800px) {
+  .page-fit {
+    height: auto;
+    min-height: 100svh;
+    overflow: visible;
+  }
+  .deck {
+    flex: none;
   }
 }
 
