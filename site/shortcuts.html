@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Shortcuts · Screen Koko</title>
+    <meta name="description" content="Every Screen Koko keyboard shortcut, on real keys. Press them to try." />
+    <meta name="theme-color" content="#faf9f7" />
+    <link rel="icon" href="/img/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
+    <link rel="preload" href="/fonts/satoshi-medium.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="page-fit">
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="nav">
+      <a class="brand" href="/" aria-label="Screen Koko home">
+        <img src="/img/icon.svg" alt="" width="26" height="26" />
+        <span>screen koko<span class="dot">.</span></span>
+      </a>
+      <nav aria-label="Main">
+        <ul class="nav-links">
+          <li><a href="/shortcuts" aria-current="page">Shortcuts</a></li>
+          <li><a href="/about">About</a></li>
+          <li>
+            <a href="https://dukedev.space" target="_blank" rel="noopener">
+              Built by Duke
+              <svg class="ext" viewBox="0 0 12 12" aria-hidden="true"><path d="M3.5 2.5h6v6M9.5 2.5 2.5 9.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" /></svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="nav-end">
+        <a class="nav-text" href="https://github.com/Dukeazeta/screen-koko/releases/latest" target="_blank" rel="noopener">Release notes</a>
+        <a class="btn btn-primary btn-sm" href="https://github.com/Dukeazeta/screen-koko/releases/latest/download/ScreenKoko-Setup.exe">
+          <svg class="win-glyph" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M0 0h7.5v7.5H0zM8.5 0H16v7.5H8.5zM0 8.5h7.5V16H0zM8.5 8.5H16V16H8.5z" /></svg>
+          Download
+        </a>
+        <button class="menu-btn" type="button" data-menu-open aria-expanded="false" aria-controls="menu">
+          Menu
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 5h11M2.5 11h11" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" /></svg>
+        </button>
+      </div>
+    </header>
+
+    <main id="main" class="sc">
+      <div class="sc-head">
+        <div>
+          <h1>Six keys run the whole thing.</h1>
+          <p class="sc-hint"><span class="live" aria-hidden="true"></span><span data-hint>Press any of these on your keyboard, or tap one.</span></p>
+        </div>
+        <p>Screen Koko never needs your mouse. These work from any app, even while it is hidden.</p>
+      </div>
+
+      <div class="deck">
+        <button class="combo" type="button" data-combo="ctrl+shift+space">
+          <span class="caps" aria-hidden="true">
+            <span class="key key-wide" data-k="ctrl">Ctrl</span><span class="plus">+</span>
+            <span class="key key-wide" data-k="shift"><span class="sub"><svg viewBox="0 0 16 16"><path d="M8 2.5 2.5 8.5H5.5V13h5V8.5h3z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" /></svg>Shift</span></span><span class="plus">+</span>
+            <span class="key key-space" data-k="space">Space</span>
+          </span>
+          <span>
+            <span class="combo-title">Show or hide</span>
+            <span class="combo-desc">Bring the notch back or tuck it away. Listening keeps going.</span>
+          </span>
+          <span class="sr-only">Control plus Shift plus Space</span>
+        </button>
+
+        <button class="combo" type="button" data-combo="ctrl+enter">
+          <span class="caps" aria-hidden="true">
+            <span class="key key-wide" data-k="ctrl">Ctrl</span><span class="plus">+</span>
+            <span class="key key-wide" data-k="enter"><span class="sub">Enter <svg viewBox="0 0 16 16"><path d="M13 3v5.5H4M6.5 6 4 8.5 6.5 11" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg></span></span>
+          </span>
+          <span>
+            <span class="combo-title">Ask about your screen</span>
+            <span class="combo-desc">Takes a fresh screenshot and tells you what matters on it. No mic needed.</span>
+          </span>
+          <span class="sr-only">Control plus Enter</span>
+        </button>
+
+        <button class="combo" type="button" data-combo="ctrl+space">
+          <span class="caps" aria-hidden="true">
+            <span class="key key-wide" data-k="ctrl">Ctrl</span><span class="plus">+</span>
+            <span class="key key-space" data-k="space">Space</span>
+          </span>
+          <span>
+            <span class="combo-title">Open and read the screen</span>
+            <span class="combo-desc">Opens the notch and asks about the screen in one press.</span>
+          </span>
+          <span class="sr-only">Control plus Space</span>
+        </button>
+
+        <button class="combo" type="button" data-combo="ctrl+shift+enter">
+          <span class="caps" aria-hidden="true">
+            <span class="key key-wide" data-k="ctrl">Ctrl</span><span class="plus">+</span>
+            <span class="key key-wide" data-k="shift"><span class="sub"><svg viewBox="0 0 16 16"><path d="M8 2.5 2.5 8.5H5.5V13h5V8.5h3z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" /></svg>Shift</span></span><span class="plus">+</span>
+            <span class="key key-wide" data-k="enter"><span class="sub">Enter <svg viewBox="0 0 16 16"><path d="M13 3v5.5H4M6.5 6 4 8.5 6.5 11" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg></span></span>
+          </span>
+          <span>
+            <span class="combo-title">Start typing</span>
+            <span class="combo-desc">Hands the notch your keyboard so you can type a question.</span>
+          </span>
+          <span class="sr-only">Control plus Shift plus Enter</span>
+        </button>
+
+        <button class="combo" type="button" data-combo="esc">
+          <span class="caps" aria-hidden="true">
+            <span class="key" data-k="esc">Esc</span>
+          </span>
+          <span>
+            <span class="combo-title">Let go</span>
+            <span class="combo-desc">Gives the keyboard back and folds everything into the notch.</span>
+          </span>
+          <span class="sr-only">Escape</span>
+        </button>
+
+        <button class="combo" type="button" data-combo="ctrl+m">
+          <span class="caps" aria-hidden="true">
+            <span class="key key-wide" data-k="ctrl">Ctrl</span><span class="plus">+</span>
+            <span class="key" data-k="m">M</span>
+          </span>
+          <span>
+            <span class="combo-title">Click-through</span>
+            <span class="combo-desc">Clicks pass to the window underneath. Press again to grab the notch.</span>
+          </span>
+          <span class="sr-only">Control plus M</span>
+        </button>
+      </div>
+    </main>
+
+    <div class="menu-sheet" id="menu" data-menu aria-hidden="true" role="dialog" aria-label="Menu">
+      <div class="menu-sheet-head">
+        <a class="brand" href="/"><img src="/img/icon.svg" alt="" width="26" height="26" /><span>screen koko<span class="dot">.</span></span></a>
+        <button class="menu-btn" type="button" data-menu-close style="display: inline-flex">
+          Close
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" /></svg>
+        </button>
+      </div>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="https://dukedev.space" target="_blank" rel="noopener">Built by Duke</a></li>
+        <li><a href="https://github.com/Dukeazeta/screen-koko/releases/latest" target="_blank" rel="noopener">Release notes</a></li>
+      </ul>
+      <a class="btn btn-primary btn-lg" href="https://github.com/Dukeazeta/screen-koko/releases/latest/download/ScreenKoko-Setup.exe">
+        <svg class="win-glyph" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M0 0h7.5v7.5H0zM8.5 0H16v7.5H8.5zM0 8.5h7.5V16H0zM8.5 8.5H16V16H8.5z" /></svg>
+        Download for Windows
+      </a>
+    </div>
+
+    <script src="/app.js" defer></script>
+  </body>
+</html>

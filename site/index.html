@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en" class="snap">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Screen Koko: the AI notch for Windows</title>
+    <meta
+      name="description"
+      content="Screen Koko sits as a small notch at the top of your screen, listens to your call, reads your screen when you ask, and writes the answer fast. Free for Windows."
+    />
+    <meta name="theme-color" content="#faf9f7" />
+    <link rel="icon" href="/img/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
+    <meta property="og:title" content="Screen Koko: the AI notch for Windows" />
+    <meta property="og:description" content="Answers while you talk, from a small notch that never steals focus." />
+    <meta property="og:image" content="https://cheat.dukedev.space/img/icon-256.png" />
+    <meta property="og:url" content="https://cheat.dukedev.space/" />
+    <link rel="preload" href="/fonts/satoshi-medium.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <section class="screen hero" aria-labelledby="hero-title">
+      <header class="nav">
+        <a class="brand" href="/" aria-label="Screen Koko home">
+          <img src="/img/icon.svg" alt="" width="26" height="26" />
+          <span>screen koko<span class="dot">.</span></span>
+        </a>
+        <nav aria-label="Main">
+          <ul class="nav-links">
+            <li><a href="/shortcuts">Shortcuts</a></li>
+            <li><a href="/about">About</a></li>
+            <li>
+              <a href="https://dukedev.space" target="_blank" rel="noopener">
+                Built by Duke
+                <svg class="ext" viewBox="0 0 12 12" aria-hidden="true"><path d="M3.5 2.5h6v6M9.5 2.5 2.5 9.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" /></svg>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="nav-end">
+          <a class="nav-text" href="https://github.com/Dukeazeta/screen-koko/releases/latest" target="_blank" rel="noopener">Release notes</a>
+          <a class="btn btn-primary btn-sm" href="https://github.com/Dukeazeta/screen-koko/releases/latest/download/ScreenKoko-Setup.exe">
+            <svg class="win-glyph" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M0 0h7.5v7.5H0zM8.5 0H16v7.5H8.5zM0 8.5h7.5V16H0zM8.5 8.5H16V16H8.5z" /></svg>
+            Download
+          </a>
+          <button class="menu-btn" type="button" data-menu-open aria-expanded="false" aria-controls="menu">
+            Menu
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 5h11M2.5 11h11" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" /></svg>
+          </button>
+        </div>
+      </header>
+
+      <main id="main" class="hero-copy">
+        <img class="hero-mark" src="/img/icon.svg" alt="" width="54" height="54" />
+        <h1 id="hero-title">The AI notch that answers while you talk</h1>
+        <p class="hero-sub">
+          Screen Koko sits in a small notch at the top of your screen. It listens to the call, reads your screen when
+          you ask, and writes back fast, without ever taking focus from the app you're in.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-lg" href="https://github.com/Dukeazeta/screen-koko/releases/latest/download/ScreenKoko-Setup.exe">
+            <svg class="win-glyph" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M0 0h7.5v7.5H0zM8.5 0H16v7.5H8.5zM0 8.5h7.5V16H0zM8.5 8.5H16V16H8.5z" /></svg>
+            Download for Windows
+          </a>
+          <a class="btn btn-outline btn-lg" href="/shortcuts">See the shortcuts</a>
+        </div>
+        <p class="hero-meta"><span>Free</span><span>Windows 10 and 11</span><span>v1.2.0, 151 MB</span></p>
+      </main>
+
+      <div class="stage">
+        <div class="tabs" role="tablist" aria-label="Choose a profile to see the notch answer">
+          <button class="tab" type="button" role="tab" aria-selected="true" data-profile="interview">Interview</button>
+          <button class="tab" type="button" role="tab" aria-selected="false" tabindex="-1" data-profile="meeting">Meeting</button>
+          <button class="tab" type="button" role="tab" aria-selected="false" tabindex="-1" data-profile="sales">Sales</button>
+          <button class="tab" type="button" role="tab" aria-selected="false" tabindex="-1" data-profile="presentation">Presentation</button>
+          <button class="tab" type="button" role="tab" aria-selected="false" tabindex="-1" data-profile="negotiation">Negotiation</button>
+        </div>
+        <div class="slot" data-demo role="tabpanel" aria-label="Screen Koko answering a question on a video call (illustration)">
+          <div class="desk">
+            <div class="callbar" aria-hidden="true">
+              <span class="rec"></span>
+              <span>Video call</span>
+              <span class="win-ctrls"><i></i><i></i><i></i></span>
+            </div>
+            <div class="tiles" aria-hidden="true">
+              <div class="tile tile-a">
+                <span class="face" data-face>IV</span>
+                <span class="name" data-speaker>Interviewer</span>
+              </div>
+              <div class="tile tile-b">
+                <span class="face">You</span>
+              </div>
+            </div>
+            <p class="caption" data-caption aria-live="polite"></p>
+          </div>
+          <div class="notch" data-state="closed">
+            <div class="notch-bar">
+              <img src="/img/icon.svg" alt="" width="16" height="16" />
+              <span class="notch-word">screen koko<i>.</i></span>
+              <span class="notch-sep" aria-hidden="true"></span>
+              <span class="notch-status" data-status>Listening</span>
+              <span class="meter" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+            </div>
+            <div class="notch-body">
+              <div class="notch-inner">
+                <div class="notch-content">
+                  <p class="notch-who" data-who>Interview profile</p>
+                  <p class="notch-answer" data-answer aria-live="polite"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="screen closing" aria-labelledby="closing-title">
+      <div class="cta-band">
+        <div class="cta-keys" data-cta-keys aria-hidden="true">
+          <span class="key key-wide" data-k="ctrl">Ctrl</span>
+          <span class="key key-wide" data-k="enter"><span class="sub">Enter <svg viewBox="0 0 16 16"><path d="M13 3v5.5H4M6.5 6 4 8.5 6.5 11" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg></span></span>
+        </div>
+        <h2 id="closing-title">Keep the answer one shortcut away.</h2>
+        <p>Install it once. Press <b>Ctrl&nbsp;+&nbsp;Shift&nbsp;+&nbsp;Space</b> to bring it up, <b>Ctrl&nbsp;+&nbsp;Enter</b> to ask about your screen.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-lg" href="https://github.com/Dukeazeta/screen-koko/releases/latest/download/ScreenKoko-Setup.exe">
+            <svg class="win-glyph" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M0 0h7.5v7.5H0zM8.5 0H16v7.5H8.5zM0 8.5h7.5V16H0zM8.5 8.5H16V16H8.5z" /></svg>
+            Download for Windows
+          </a>
+          <a class="btn btn-outline btn-lg" href="/about">How it works</a>
+        </div>
+      </div>
+
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="/" aria-label="Screen Koko home">
+            <img src="/img/icon.svg" alt="" width="26" height="26" />
+            <span>screen koko<span class="dot">.</span></span>
+          </a>
+          <p>A floating AI notch for Windows. Listens, reads your screen on request, and answers without stealing focus.</p>
+        </div>
+        <nav class="footer-col" aria-label="Product">
+          <h3>Product</h3>
+          <ul>
+            <li><a href="https://github.com/Dukeazeta/screen-koko/releases/latest/download/ScreenKoko-Setup.exe">Download for Windows</a></li>
+            <li><a href="/shortcuts">Shortcuts</a></li>
+            <li><a href="/about">About</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-col" aria-label="Help">
+          <h3>Help</h3>
+          <ul>
+            <li><a href="/about#install">Installing on Windows</a></li>
+            <li><a href="/about#privacy">What gets sent where</a></li>
+            <li>
+              <a href="https://github.com/Dukeazeta/screen-koko/releases/latest" target="_blank" rel="noopener">
+                Release notes
+                <svg class="ext" viewBox="0 0 12 12" aria-hidden="true"><path d="M3.5 2.5h6v6M9.5 2.5 2.5 9.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" /></svg>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <nav class="footer-col" aria-label="Builder">
+          <h3>Who built it</h3>
+          <ul>
+            <li>
+              <a href="https://dukedev.space" target="_blank" rel="noopener">
+                Duke Azeta, portfolio
+                <svg class="ext" viewBox="0 0 12 12" aria-hidden="true"><path d="M3.5 2.5h6v6M9.5 2.5 2.5 9.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" /></svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/Dukeazeta" target="_blank" rel="noopener">
+                GitHub
+                <svg class="ext" viewBox="0 0 12 12" aria-hidden="true"><path d="M3.5 2.5h6v6M9.5 2.5 2.5 9.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" /></svg>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <span>Answers before the pause gets awkward.</span>
+        <span>© 2026 Duke Azeta</span>
+      </div>
+    </footer>
+
+    <div class="menu-sheet" id="menu" data-menu aria-hidden="true" role="dialog" aria-label="Menu">
+      <div class="menu-sheet-head">
+        <a class="brand" href="/"><img src="/img/icon.svg" alt="" width="26" height="26" /><span>screen koko<span class="dot">.</span></span></a>
+        <button class="menu-btn" type="button" data-menu-close style="display: inline-flex">
+          Close
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" /></svg>
+        </button>
+      </div>
+      <ul>
+        <li><a href="/shortcuts">Shortcuts</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="https://dukedev.space" target="_blank" rel="noopener">Built by Duke</a></li>
+        <li><a href="https://github.com/Dukeazeta/screen-koko/releases/latest" target="_blank" rel="noopener">Release notes</a></li>
+      </ul>
+      <a class="btn btn-primary btn-lg" href="https://github.com/Dukeazeta/screen-koko/releases/latest/download/ScreenKoko-Setup.exe">
+        <svg class="win-glyph" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M0 0h7.5v7.5H0zM8.5 0H16v7.5H8.5zM0 8.5h7.5V16H0zM8.5 8.5H16V16H8.5z" /></svg>
+        Download for Windows
+      </a>
+    </div>
+
+    <script src="/app.js" defer></script>
+  </body>
+</html>

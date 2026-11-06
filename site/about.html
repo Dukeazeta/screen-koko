@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>About · Screen Koko</title>
+    <meta name="description" content="What Screen Koko is, how it handles your data, how to install it, and who built it." />
+    <meta name="theme-color" content="#faf9f7" />
+    <link rel="icon" href="/img/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
+    <link rel="preload" href="/fonts/satoshi-medium.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="nav">
+      <a class="brand" href="/" aria-label="Screen Koko home">
+        <img src="/img/icon.svg" alt="" width="26" height="26" />
+        <span>screen koko<span class="dot">.</span></span>
+      </a>
+      <nav aria-label="Main">
+        <ul class="nav-links">
+          <li><a href="/shortcuts">Shortcuts</a></li>
+          <li><a href="/about" aria-current="page">About</a></li>
+          <li>
+            <a href="https://dukedev.space" target="_blank" rel="noopener">
+              Built by Duke
+              <svg class="ext" viewBox="0 0 12 12" aria-hidden="true"><path d="M3.5 2.5h6v6M9.5 2.5 2.5 9.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" /></svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="nav-end">
+        <a class="nav-text" href="https://github.com/Dukeazeta/screen-koko/releases/latest" target="_blank" rel="noopener">Release notes</a>
+        <a class="btn btn-primary btn-sm" href="https://github.com/Dukeazeta/screen-koko/releases/latest/download/ScreenKoko-Setup.exe">
+          <svg class="win-glyph" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M0 0h7.5v7.5H0zM8.5 0H16v7.5H8.5zM0 8.5h7.5V16H0zM8.5 8.5H16V16H8.5z" /></svg>
+          Download
+        </a>
+        <button class="menu-btn" type="button" data-menu-open aria-expanded="false" aria-controls="menu">
+          Menu
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 5h11M2.5 11h11" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" /></svg>
+        </button>
+      </div>
+    </header>
+
+    <main id="main" class="about">
+      <div class="about-grid">
+        <div>
+          <h1>Built so you never alt&#8209;tab mid&#8209;sentence.</h1>
+          <p class="about-lede">
+            Screen Koko is a small AI assistant that lives in a notch at the top of your screen. It hears the call,
+            reads your screen when you ask, and writes a short answer you can use straight away. The app you're in keeps
+            the keyboard the whole time.
+          </p>
+          <ul class="facts">
+            <li><b>How it answers</b><span>It streams your mic and the call audio to Google Gemini Live and shows the reply as text in the notch.</span></li>
+            <li><b>Profiles</b><span>Interview, Meeting, Sales, Presentation and Negotiation, each with its own way of answering. Pick how long or short replies should be.</span></li>
+            <li><b>Out of sight</b><span>The notch is hidden from screenshots and screen sharing, and it never steals focus from your call.</span></li>
+            <li id="privacy"><b>What gets sent where</b><span>Audio, typed questions and the screenshots you ask for go to Google Gemini. Your saved facts and conversation history stay on your PC, and you can delete them in Settings.</span></li>
+            <li id="install"><b>Installing</b><span>Windows 10 or 11. The installer isn't code-signed yet, so Windows may say "Windows protected your PC". Choose <em>More info</em>, then <em>Run anyway</em>.</span></li>
+          </ul>
+        </div>
+
+        <aside class="maker" aria-labelledby="maker-title">
+          <span class="maker-tag">Who built it</span>
+          <h2 id="maker-title">Duke Azeta</h2>
+          <p>
+            Software engineer. Screen Koko started as a personal tool for getting through calls without fumbling between
+            windows, and grew into something worth sharing.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://dukedev.space" target="_blank" rel="noopener">See Duke's portfolio</a>
+            <a class="btn btn-outline" href="https://github.com/Dukeazeta" target="_blank" rel="noopener">GitHub</a>
+          </div>
+          <p class="note"><b>Version 1.2.0.</b> Free to download for Windows. See the <a href="https://github.com/Dukeazeta/screen-koko/releases/latest" target="_blank" rel="noopener" style="text-decoration: underline; text-underline-offset: 3px">release notes</a> for what changed.</p>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="mini-footer">
+      <span>Answers before the pause gets awkward.</span>
+      <span>© 2026 Duke Azeta</span>
+    </footer>
+
+    <div class="menu-sheet" id="menu" data-menu aria-hidden="true" role="dialog" aria-label="Menu">
+      <div class="menu-sheet-head">
+        <a class="brand" href="/"><img src="/img/icon.svg" alt="" width="26" height="26" /><span>screen koko<span class="dot">.</span></span></a>
+        <button class="menu-btn" type="button" data-menu-close style="display: inline-flex">
+          Close
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" /></svg>
+        </button>
+      </div>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/shortcuts">Shortcuts</a></li>
+        <li><a href="https://dukedev.space" target="_blank" rel="noopener">Built by Duke</a></li>
+        <li><a href="https://github.com/Dukeazeta/screen-koko/releases/latest" target="_blank" rel="noopener">Release notes</a></li>
+      </ul>
+      <a class="btn btn-primary btn-lg" href="https://github.com/Dukeazeta/screen-koko/releases/latest/download/ScreenKoko-Setup.exe">
+        <svg class="win-glyph" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M0 0h7.5v7.5H0zM8.5 0H16v7.5H8.5zM0 8.5h7.5V16H0zM8.5 8.5H16V16H8.5z" /></svg>
+        Download for Windows
+      </a>
+    </div>
+
+    <script src="/app.js" defer></script>
+  </body>
+</html>
