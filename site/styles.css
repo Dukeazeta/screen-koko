@@ -739,89 +739,118 @@ p {
 }
 .cta-band {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  align-items: end;
-  gap: clamp(20px, 4vw, 64px);
-  padding: clamp(24px, 3.4vw, 44px);
-  border-radius: 28px;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  align-items: center;
+  gap: clamp(16px, 3vw, 48px);
+  padding: clamp(20px, 2.4vw, 30px) clamp(22px, 3vw, 40px);
+  border-radius: 24px;
   background:
-    radial-gradient(46% 90% at 100% 0%, rgba(91, 156, 251, 0.9) 0%, rgba(91, 156, 251, 0) 100%),
+    radial-gradient(46% 120% at 100% 0%, rgba(91, 156, 251, 0.9) 0%, rgba(91, 156, 251, 0) 100%),
     linear-gradient(128deg, var(--canvas) 0%, #e6eefa 45%, #c8dcf5 100%);
   box-shadow: rgba(18, 23, 34, 0.08) 0 0 0 0.5px inset;
 }
 .cta-band h2 {
-  max-width: 11ch;
-  font-size: clamp(32px, 3.9vw, 56px);
+  max-width: 16ch;
+  font-size: clamp(24px, 2.2vw, 32px);
   font-weight: 500;
-  line-height: 1.04;
-  letter-spacing: -0.04em;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
 }
 .cta-line {
   color: var(--ink-80);
-  font-size: clamp(16px, 1.3vw, 18px);
-  line-height: 2.1;
+  font-size: clamp(15px, 1.15vw, 16px);
+  line-height: 1.9;
+  text-wrap: balance;
 }
 .ikeys {
   display: inline-flex;
-  gap: 5px;
-  margin: 0 3px;
-  vertical-align: middle;
+  gap: 4px;
+  margin: 0 2px;
+  vertical-align: -6px;
 }
 .cta-band .hero-actions {
   justify-content: flex-start;
-  margin-top: 18px;
+  margin-top: 12px;
 }
 
-/* The link grid is the footer: Dock-scale columns that own the screen. */
+/* The footer is a ruled link directory: three columns whose rows run the full height. */
 .footer-grid {
   display: grid;
   flex: 1;
-  grid-template-columns: 1.2fr repeat(3, 1fr);
-  align-content: center;
-  gap: 40px;
+  grid-template-columns: 1fr repeat(3, 1.15fr);
+  gap: 0 clamp(20px, 3vw, 44px);
+  min-height: 0;
+}
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  padding-top: 4px;
 }
 .footer-brand p {
-  max-width: 21rem;
+  max-width: 19rem;
   margin-top: 14px;
   color: var(--ink-60);
   font-size: 15px;
   line-height: 1.5;
 }
 .footer-brand .footer-meta {
-  margin-top: 10px;
+  margin-top: auto;
+  padding-top: 14px;
   color: var(--ink-50);
   font-size: 14px;
 }
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
 .footer-col h3 {
-  margin: 0 0 12px;
+  margin: 0 0 10px;
   color: var(--ink-60);
   font-size: 15px;
   font-weight: 500;
 }
 .footer-col ul {
+  display: grid;
+  flex: 1;
+  grid-template-rows: repeat(3, 1fr);
   margin: 0;
   padding: 0;
   list-style: none;
+  border-bottom: 1px solid var(--hairline);
+}
+.footer-col li {
+  display: flex;
+  border-top: 1px solid var(--hairline);
 }
 .footer-col a {
-  display: inline-flex;
-  align-items: baseline;
-  gap: 8px;
-  padding: 5px 0;
-  font-size: clamp(20px, 2.2vw, 32px);
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 6px 2px;
+  font-size: clamp(22px, 2.75vw, 40px);
   font-weight: 500;
-  line-height: 1.18;
+  line-height: 1.1;
+  letter-spacing: -0.035em;
   white-space: nowrap;
-  letter-spacing: -0.03em;
-  transition: color 160ms ease;
+  transition: color 160ms ease, padding 220ms var(--ease-out);
 }
 .footer-col a:hover {
+  padding-left: 10px;
   color: var(--cobalt);
 }
-.footer-col .ext {
-  width: 0.42em;
-  height: 0.42em;
-  opacity: 0.5;
+.footer-col .arrow {
+  width: 0.62em;
+  height: 0.62em;
+  flex: none;
+  opacity: 0.35;
+  transition: opacity 160ms ease, transform 220ms var(--ease-out);
+}
+.footer-col a:hover .arrow {
+  opacity: 1;
+  transform: translateX(3px);
 }
 .footer-bottom {
   display: flex;
@@ -904,8 +933,8 @@ p {
   font-weight: 500;
 }
 .key-sm {
-  --cap-h: 30px;
-  min-width: 30px;
+  --cap-h: 27px;
+  min-width: 27px;
   place-items: center;
   padding: 0 9px 3px;
   border-radius: 8px;
@@ -1112,18 +1141,6 @@ p {
   box-shadow:
     rgba(18, 23, 34, 0.1) 0 0 0 0.5px inset,
     rgba(0, 0, 0, 0.04) 0 20px 20px -8px;
-}
-.maker-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  height: 28px;
-  padding: 0 12px 1px;
-  border-radius: 100px;
-  background: var(--lavender);
-  color: #4b2bb8;
-  font-size: 13px;
-  font-weight: 500;
 }
 .maker h2 {
   margin-top: 18px;
@@ -1338,48 +1355,84 @@ p {
     padding-bottom: 14px;
   }
 }
-/* Phone footer: one screen, links first. */
+/* Phone footer: one screen, links first and largest. */
 @media (max-width: 640px) {
   .closing {
-    gap: 18px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    gap: 16px;
+    padding-top: 22px;
+    padding-bottom: 18px;
   }
-  .cta-band {
-    gap: 6px;
-    padding: 22px 20px;
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px 18px;
   }
-  .cta-band h2 {
-    font-size: 30px;
-    max-width: 14ch;
-  }
-  .cta-line {
-    font-size: 15px;
-    line-height: 1.95;
-  }
-  .cta-band .hero-actions {
-    margin-top: 12px;
+  .footer-brand {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
   }
   .footer-brand p:not(.footer-meta) {
     display: none;
   }
   .footer-brand .footer-meta {
-    margin-top: 6px;
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
   }
-  .footer-grid {
-    gap: 16px 16px;
+  .footer-col:last-child {
+    grid-column: 1 / -1;
+  }
+  .footer-col:last-child ul {
+    grid-template-rows: none;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 18px;
   }
   .footer-col h3 {
     margin-bottom: 4px;
     font-size: 14px;
   }
   .footer-col a {
-    padding: 3px 0;
-    font-size: 19px;
+    padding: 9px 0;
+    font-size: 24px;
+  }
+  .cta-band {
+    grid-template-columns: 1fr;
+    gap: 6px;
+    padding: 18px 18px 20px;
+  }
+  .cta-band h2 {
+    font-size: 22px;
+  }
+  .cta-line {
+    font-size: 14.5px;
+    line-height: 1.95;
   }
   .footer-bottom {
-    padding-top: 14px;
+    padding-top: 12px;
     font-size: 13px;
+  }
+  /* Shortcuts: room comes from the header, not from between rows. */
+  .sc {
+    padding-top: 0;
+  }
+  .sc-head h1 {
+    font-size: 27px;
+  }
+  .sc-hint {
+    margin-top: 4px;
+    font-size: 12.5px;
+  }
+  .deck {
+    margin-top: 10px;
+  }
+  .combo {
+    gap: 7px;
+    padding: 13px 0 9px;
+    line-height: 1.3;
+  }
+  .combo-desc {
+    font-size: 12.5px;
   }
 }
 
